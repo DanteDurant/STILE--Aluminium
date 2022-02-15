@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+:root {
+  --fw-reg: 300;
+  --fw-bold: 900;
+  --clr-light: rgb(255, 255, 255);
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15); }
+
+/* General styles */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+body {
+  background: #ccc;
+  margin: 0; }
+
+/**************************/
+/* HEADER */
+/**************************/
+.header {
+  display: flex;
+  height: 10rem;
+  width: 100vw;
+  background-color: #fff;
+  margin: 0;
+  align-items: center; }
+  .header--logo {
+    height: 7rem;
+    margin-left: 10vw; }

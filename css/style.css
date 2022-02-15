@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+:root {
+  --fw-reg: 300;
+  --fw-bold: 900;
+  --clr-light: #f6f7f8;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15); }
+
+/* General styles */
+html {
+  font-size: 62.5%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth; }
+
+body {
+  background: #ccc;
+  margin: 0; }
+
+.flex {
+  display: flex; }
+
+/**************************/
+/* HEADER */
+/**************************/
+.header {
+  height: 10rem;
+  width: 100vw;
+  background-color: #fff;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between; }
+  .header--button__container {
+    margin-right: 15vw; }
+  .header--logo {
+    height: 7rem;
+    margin-left: 10vw; }
+
+.button {
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 0;
+  border: none;
+  background-color: #0080ff;
+  color: #f6f7f8;
+  font-weight: 700; }
+
+button {
+  margin-right: 2rem; }
+
+button + button {
+  margin-right: 0; }
