@@ -1,0 +1,11 @@
+.navigation {
+  width: 100vw;
+  height: 8rem;
+  background-color: #0080ff;
+
+  &--box {
+    height: inherit;
+    justify-content: space-around;
+    margin: 0 10vw;
+  }
+}

@@ -27,8 +27,27 @@ body {
   background: #ccc;
   margin: 0; }
 
-.flex {
-  display: flex; }
+a {
+  cursor: pointer; }
+
+.svg {
+  width: 5rem; }
+
+.button {
+  height: 3.5rem;
+  padding: 0 3rem;
+  border-radius: 0;
+  border: none;
+  background-color: #0080ff;
+  color: #f6f7f8;
+  font-weight: 700;
+  cursor: pointer; }
+  .button:hover {
+    transition: all 350ms;
+    border-bottom: 0.5rem solid #f6f7f8; }
+
+button:not(:last-child) {
+  margin-right: 3rem; }
 
 /**************************/
 /* HEADER */
@@ -39,23 +58,33 @@ body {
   background-color: #fff;
   margin: 0;
   align-items: center;
-  justify-content: space-between; }
-  .header--button__container {
-    margin-right: 15vw; }
+  justify-content: space-between !important;
+  transition: all 0.2s; }
+  .header--button:hover {
+    border: none;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .header--button:active, .header--button:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .header--container {
+    margin-right: 7vw; }
   .header--logo {
     height: 7rem;
-    margin-left: 10vw; }
+    margin-left: 5vw; }
+    .header--logo__fb {
+      margin-left: 1rem; }
 
-.button {
-  padding: 1rem 3rem 1rem 3rem;
-  border-radius: 0;
-  border: none;
-  background-color: #0080ff;
-  color: #f6f7f8;
-  font-weight: 700; }
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
-button {
-  margin-right: 2rem; }
-
-button + button {
-  margin-right: 0; }
+.navigation {
+  width: 100vw;
+  height: 8rem;
+  background-color: #0080ff; }
+  .navigation--box {
+    height: inherit;
+    justify-content: space-around;
+    margin: 0 10vw; }

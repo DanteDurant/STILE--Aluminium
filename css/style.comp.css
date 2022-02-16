@@ -6,7 +6,7 @@
 :root {
   --fw-reg: 300;
   --fw-bold: 900;
-  --clr-light: rgb(255, 255, 255);
+  --clr-light: #f6f7f8;
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
   --fs-h1: 3rem;
@@ -19,22 +19,60 @@
 /* General styles */
 html {
   font-size: 62.5%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
   scroll-behavior: smooth; }
 
 body {
   background: #ccc;
   margin: 0; }
 
+.svg {
+  width: 5rem; }
+
+.button {
+  height: 3.5rem;
+  padding: 0 3rem;
+  border-radius: 0;
+  border: none;
+  background-color: #0080ff;
+  color: #f6f7f8;
+  font-weight: 700; }
+  .button:hover {
+    transition: all 350ms;
+    border-bottom: 0.5rem solid #f6f7f8; }
+
+button:not(:last-child) {
+  margin-right: 3rem; }
+
 /**************************/
 /* HEADER */
 /**************************/
 .header {
-  display: flex;
   height: 10rem;
   width: 100vw;
   background-color: #fff;
   margin: 0;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-between !important; }
+  .header--container {
+    margin-right: 7vw; }
   .header--logo {
     height: 7rem;
     margin-left: 10vw; }
+    .header--logo__fb {
+      margin-left: 1rem; }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.navigation {
+  width: 100vw;
+  height: 8rem;
+  background-color: #0080ff; }
+  .navigation--box {
+    height: inherit;
+    justify-content: space-around;
+    margin: 0 10vw; }

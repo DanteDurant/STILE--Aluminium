@@ -1,17 +1,19 @@
 .button {
-  padding: 1rem 3rem 1rem 3rem;
+  height: 3.5rem;
+  padding: 0 3rem;
   border-radius: 0;
   border: none;
   background-color: #0080ff;
   color: #f6f7f8;
   //   font-family: inherit;
   font-weight: 700;
+
+  &:hover {
+    transition: all 350ms;
+    border-bottom: 0.5rem solid #f6f7f8;
+  }
 }
 
-button {
-  margin-right: 2rem;
-}
-
-button + button {
-  margin-right: 0;
+button:not(:last-child) {
+  margin-right: 3rem;
 }

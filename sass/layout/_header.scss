@@ -1,0 +1,44 @@
+/**************************/
+/* HEADER */
+/**************************/
+
+.header {
+  height: 10rem;
+  width: 100vw;
+  background-color: #fff;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between !important;
+  transition: all 0.2s;
+
+  &--button {
+    &:hover {
+      border: none;
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+    }
+
+    &:active,
+    &:focus {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+    }
+  }
+
+  &--container {
+    margin-right: 7vw;
+  }
+
+  &--logo {
+    height: 7rem;
+    margin-left: 5vw;
+
+    &__fb {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.flex {
+  @include flex-center;
+}
