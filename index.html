@@ -8,10 +8,10 @@
 
     <link rel="stylesheet" href="css/style.css" />
 
-    <script
+    <!-- <script
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
-    ></script>
+    ></script> -->
 
     <script defer src="js/script.js"></script>
 
@@ -22,6 +22,19 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- <script
+      src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
+      integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY="
+      crossorigin="anonymous"
+    ></script> -->
+
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script> -->
+    ?
   </head>
 
   <body>
@@ -50,6 +63,29 @@
       </div>
     </nav>
 
-    <script src="js/script.js"></script>
+    <div class="container">
+      <div class="carousel">
+        <div class="carousel--slider">
+          <section>content for section 1</section>
+          <section>content for section 2</section>
+          <section>content for section 3</section>
+          <section>content for section 4</section>
+        </div>
+        <div class="controls">
+          <span class="arrow arrow--left">
+            <img src="svg/menu-left.svg" />
+          </span>
+          <span class="arrow arrow--right">
+            <img src="svg/menu-right.svg" />
+          </span>
+          <ul class="ul">
+            <li class="ul--li selected"></li>
+            <li class="ul--li"></li>
+            <li class="ul--li"></li>
+            <li class="ul--li"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -6,9 +6,9 @@
 :root {
   --fw-reg: 300;
   --fw-bold: 900;
-  --clr-light: #f6f7f8;
-  --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-light: #ffffff;
+  --clr-dark: #236299;
+  --clr-accent: #0080ff;
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
@@ -27,6 +27,9 @@ body {
   background: #ccc;
   margin: 0; }
 
+a {
+  cursor: pointer; }
+
 .svg {
   width: 5rem; }
 
@@ -36,11 +39,11 @@ body {
   border-radius: 0;
   border: none;
   background-color: #0080ff;
-  color: #f6f7f8;
+  color: #fff;
   font-weight: 700; }
   .button:hover {
     transition: all 350ms;
-    border-bottom: 0.5rem solid #f6f7f8; }
+    border-bottom: 0.5rem solid #fff; }
 
 button:not(:last-child) {
   margin-right: 3rem; }
@@ -54,12 +57,20 @@ button:not(:last-child) {
   background-color: #fff;
   margin: 0;
   align-items: center;
-  justify-content: space-between !important; }
+  justify-content: space-between !important;
+  transition: all 0.2s; }
+  .header--button:hover {
+    border: none;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .header--button:active, .header--button:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
   .header--container {
     margin-right: 7vw; }
   .header--logo {
     height: 7rem;
-    margin-left: 10vw; }
+    margin-left: 5vw; }
     .header--logo__fb {
       margin-left: 1rem; }
 
@@ -76,3 +87,52 @@ button:not(:last-child) {
     height: inherit;
     justify-content: space-around;
     margin: 0 10vw; }
+
+.container {
+  width: 100%; }
+
+.carousel {
+  height: 40rem;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--clr-light); }
+  .carousel--slider {
+    height: 100%;
+    display: flex;
+    width: 400%; }
+    .carousel--slider section {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem; }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7rem;
+  cursor: pointer;
+  filter: invert(28%) sepia(72%) saturate(936%) hue-rotate(176deg) brightness(94%) contrast(84%); }
+  .arrow--left {
+    left: 3rem; }
+  .arrow--right {
+    right: 3rem; }
+
+.ul {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%);
+  list-style-type: none;
+  display: flex;
+  padding: none;
+  margin: none; }
+  .ul--li {
+    width: 2rem;
+    height: 2rem;
+    border: 0.2rem solid #236097;
+    border-radius: 5rem;
+    margin: 1rem;
+    background: #fff;
+    cursor: pointer; }

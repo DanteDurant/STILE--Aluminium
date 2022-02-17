@@ -3,14 +3,14 @@
   padding: 0 3rem;
   border-radius: 0;
   border: none;
-  background-color: #0080ff;
-  color: #f6f7f8;
+  background-color: $color-primary;
+  color: $color-white;
   //   font-family: inherit;
   font-weight: 700;
 
   &:hover {
     transition: all 350ms;
-    border-bottom: 0.5rem solid #f6f7f8;
+    border-bottom: 0.5rem solid $color-white;
   }
 }
 
