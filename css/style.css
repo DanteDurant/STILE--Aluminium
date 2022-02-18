@@ -92,14 +92,19 @@ button:not(:last-child) {
   width: 100%; }
 
 .carousel {
-  height: 40rem;
+  height: 60rem;
   position: relative;
   overflow: hidden;
   background-color: var(--clr-light); }
+  .carousel--image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
   .carousel--slider {
     height: 100%;
     display: flex;
-    width: 400%; }
+    width: 400%;
+    transition: all 350ms; }
     .carousel--slider section {
       flex-basis: 100%;
       display: flex;
@@ -126,15 +131,17 @@ button:not(:last-child) {
   transform: translate(-50%);
   list-style-type: none;
   display: flex;
-  padding: none;
-  margin: none; }
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff5d;
+  border-radius: 5rem; }
   .ul--li {
-    width: 2rem;
-    height: 2rem;
-    border: 0.25rem solid #236097;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 0.3rem solid #236097;
     border-radius: 5rem;
-    margin: 1rem;
-    background: #fff;
+    margin: 1rem 1.2rem;
+    background: #236097;
     cursor: pointer; }
   .ul .selected {
-    background: #236097; }
+    background: #fff; }
