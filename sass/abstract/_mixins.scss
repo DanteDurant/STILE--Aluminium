@@ -1,3 +1,5 @@
+// GENERAL ///////////////////////////////////////
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -9,6 +11,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin center-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin center-horizontal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @mixin image-correct {
@@ -23,4 +36,15 @@
     display: table;
     clear: both;
   }
+}
+
+// ARROW BACKDROUND ////////////////////////////
+
+@mixin background-transparent($side) {
+  @include center-vertical();
+  #{$side}: 8vw;
+  height: 8rem;
+  width: 8rem;
+  background-color: $color-white_transparent;
+  border-radius: 7rem;
 }

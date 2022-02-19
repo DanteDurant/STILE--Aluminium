@@ -30,9 +30,6 @@ body {
 a {
   cursor: pointer; }
 
-.svg {
-  width: 5rem; }
-
 .button {
   height: 3.5rem;
   padding: 0 3rem;
@@ -72,7 +69,8 @@ button:not(:last-child) {
     height: 7rem;
     margin-left: 5vw; }
     .header--logo__fb {
-      margin-left: 1rem; }
+      margin-left: 1rem;
+      width: 5rem; }
 
 .flex {
   display: flex;
@@ -92,47 +90,98 @@ button:not(:last-child) {
   width: 100%; }
 
 .carousel {
-  height: 40rem;
+  height: 60rem;
   position: relative;
-  overflow: hidden;
-  background-color: var(--clr-light); }
+  overflow: hidden; }
+  .carousel--image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
   .carousel--slider {
     height: 100%;
     display: flex;
-    width: 400%; }
+    width: 400%;
+    transition: all 350ms; }
     .carousel--slider section {
-      flex-basis: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 3rem; }
+      flex-basis: 100%; }
 
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 7rem;
   cursor: pointer;
-  filter: invert(28%) sepia(72%) saturate(936%) hue-rotate(176deg) brightness(94%) contrast(84%); }
+  width: 5rem;
+  height: 5rem; }
   .arrow--left {
-    left: 3rem; }
+    left: 8vw;
+    background-color: #236097;
+    clip-path: polygon(100% 100%, 100% 0, 40% 50%); }
+    .arrow--left__background {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 8vw;
+      height: 8rem;
+      width: 8rem;
+      background-color: #ffffff5d;
+      border-radius: 7rem; }
   .arrow--right {
-    right: 3rem; }
+    right: 8vw;
+    background-color: #236097;
+    clip-path: polygon(0 100%, 0 0, 60% 50%); }
+    .arrow--right__background {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 8vw;
+      height: 8rem;
+      width: 8rem;
+      background-color: #ffffff5d;
+      border-radius: 7rem; }
 
 .ul {
   position: absolute;
-  bottom: 2rem;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
+  bottom: 2rem;
   list-style-type: none;
   display: flex;
-  padding: none;
-  margin: none; }
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff5d;
+  border-radius: 5rem; }
   .ul--li {
-    width: 2rem;
-    height: 2rem;
-    border: 0.2rem solid #236097;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 0.3rem solid #236097;
     border-radius: 5rem;
-    margin: 1rem;
-    background: #fff;
+    margin: 1rem 1.2rem;
+    background: #236097;
     cursor: pointer; }
+  .ul .selected {
+    background: #fff; }
+
+@font-face {
+  font-family: "MyWebFont";
+  src: url("WebFont.eot");
+  src: url("WebFont.eot?#iefix") format("embedded-opentype"), url("WebFont.woff") format("woff"), url("WebFont.ttf") format("truetype"), url("WebFont.svg#webfont") format("svg"); }
+
+.intro {
+  width: 100%;
+  height: 50rem;
+  background-color: #fff; }
+  .intro--video {
+    width: 50%;
+    height: 100%;
+    background-color: aqua; }
+  .intro--textbox {
+    width: 50%;
+    text-align: center; }
+    .intro--textbox__heading {
+      font-family: "WebFont", Arial, sans-serif;
+      font-size: 10rem;
+      margin: 0;
+      padding: 0; }

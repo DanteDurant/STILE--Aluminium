@@ -1,37 +1,29 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
-
-:root {
-  --fw-reg: 300;
-  --fw-bold: 900;
-  --clr-light: #ffffff;
-  --clr-dark: #236299;
-  --clr-accent: #0080ff;
-  --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
-  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15); }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 /* General styles */
 html {
   font-size: 62.5%;
   font-family: "Source Sans Pro", sans-serif;
+  color: #333;
   font-weight: 400;
   scroll-behavior: smooth; }
 
+p {
+  font-size: 1.5rem; }
+
 body {
   background: #ccc;
-  margin: 0; }
+  margin: 0;
+  width: 152rem;
+  margin: 0 auto; }
 
 a {
   cursor: pointer; }
-
-.svg {
-  width: 5rem; }
 
 .button {
   height: 3.5rem;
@@ -53,7 +45,7 @@ button:not(:last-child) {
 /**************************/
 .header {
   height: 10rem;
-  width: 100vw;
+  width: 100%;
   background-color: #fff;
   margin: 0;
   align-items: center;
@@ -72,7 +64,8 @@ button:not(:last-child) {
     height: 7rem;
     margin-left: 5vw; }
     .header--logo__fb {
-      margin-left: 1rem; }
+      margin-left: 1rem;
+      width: 5rem; }
 
 .flex {
   display: flex;
@@ -80,7 +73,7 @@ button:not(:last-child) {
   align-items: center; }
 
 .navigation {
-  width: 100vw;
+  width: 100%;
   height: 8rem;
   background-color: #0080ff; }
   .navigation--box {
@@ -94,8 +87,7 @@ button:not(:last-child) {
 .carousel {
   height: 60rem;
   position: relative;
-  overflow: hidden;
-  background-color: var(--clr-light); }
+  overflow: hidden; }
   .carousel--image {
     height: 100%;
     width: 100%;
@@ -106,29 +98,50 @@ button:not(:last-child) {
     width: 400%;
     transition: all 350ms; }
     .carousel--slider section {
-      flex-basis: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 3rem; }
+      flex-basis: 100%; }
 
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 7rem;
   cursor: pointer;
-  filter: invert(28%) sepia(72%) saturate(936%) hue-rotate(176deg) brightness(94%) contrast(84%); }
+  width: 5rem;
+  height: 5rem; }
   .arrow--left {
-    left: 3rem; }
+    left: 8vw;
+    background-color: #236097;
+    clip-path: polygon(100% 100%, 100% 0, 40% 50%); }
+    .arrow--left__background {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 8vw;
+      height: 8rem;
+      width: 8rem;
+      background-color: #ffffff5d;
+      border-radius: 7rem; }
   .arrow--right {
-    right: 3rem; }
+    right: 8vw;
+    background-color: #236097;
+    clip-path: polygon(0 100%, 0 0, 60% 50%); }
+    .arrow--right__background {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 8vw;
+      height: 8rem;
+      width: 8rem;
+      background-color: #ffffff5d;
+      border-radius: 7rem; }
 
 .ul {
   position: absolute;
-  bottom: 2rem;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
+  bottom: 2rem;
   list-style-type: none;
   display: flex;
   padding: 0;
@@ -145,3 +158,45 @@ button:not(:last-child) {
     cursor: pointer; }
   .ul .selected {
     background: #fff; }
+
+.intro {
+  width: 100%;
+  height: 50rem;
+  background-color: #fff; }
+  .intro--video {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    justify-self: flex-end; }
+    .intro--video__container {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 2.5rem;
+      width: 60rem;
+      margin-left: auto; }
+    .intro--video__content {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+  .intro--textbox {
+    width: 50%;
+    height: min-content;
+    text-align: center; }
+    .intro--textbox__heading {
+      width: 28rem;
+      transform: translateX(-11rem) translateY(2.5rem); }
+      .intro--textbox__heading-sub {
+        vertical-align: middle;
+        color: #236097;
+        font-size: 4rem;
+        transform: translateX(5rem);
+        margin-bottom: 2rem; }
+    .intro--textbox__text {
+      margin: 0 auto 1rem auto;
+      width: 70%;
+      text-align: start; }
+      .intro--textbox__text-sub {
+        margin: 0 auto;
+        width: 70%;
+        text-align: start;
+        font-weight: 700; }

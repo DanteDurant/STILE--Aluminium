@@ -6,8 +6,6 @@
   height: 60rem;
   position: relative;
   overflow: hidden;
-  background-color: var(--clr-light);
-
   &--image {
     @include image-correct;
   }
@@ -19,40 +17,47 @@
     transition: all 350ms;
 
     & section {
-      flex-basis: 100%;
       @include flex-center;
-      font-size: 3rem;
+      flex-basis: 100%;
     }
   }
 }
 
 .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 7rem;
+  @include center-vertical;
   cursor: pointer;
-  filter: $svg-blue_dark;
+  width: 5rem;
+  height: 5rem;
 
   &--left {
-    left: 3rem;
+    left: 8vw;
+    background-color: $color-primary_dark;
+    clip-path: polygon(100% 100%, 100% 0, 40% 50%);
+
+    &__background {
+      @include background-transparent(left);
+    }
   }
 
   &--right {
-    right: 3rem;
+    right: 8vw;
+    background-color: $color-primary_dark;
+    clip-path: polygon(0 100%, 0 0, 60% 50%);
+
+    &__background {
+      @include background-transparent(right);
+    }
   }
 }
 
 .ul {
-  position: absolute;
+  @include center-horizontal;
   bottom: 2rem;
-  left: 50%;
-  transform: translate(-50%);
   list-style-type: none;
   display: flex;
   padding: 0;
   margin: 0;
-  background-color: #ffffff5d;
+  background-color: $color-white_transparent;
   border-radius: 5rem;
 
   &--li {

@@ -1,0 +1,58 @@
+.intro {
+  width: 100%;
+  height: 50rem;
+  background-color: $color-white;
+
+  &--video {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    justify-self: flex-end;
+
+    &__container {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 2.5rem;
+      width: 60rem;
+      margin-left: auto;
+    }
+
+    &__content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--textbox {
+    width: 50%;
+    height: min-content;
+    text-align: center;
+
+    &__heading {
+      width: 28rem;
+      transform: translateX(-11rem) translateY(2.5rem);
+
+      &-sub {
+        vertical-align: middle;
+        color: $color-primary_dark;
+        font-size: 4rem;
+        transform: translateX(5rem);
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__text {
+      margin: 0 auto 1rem auto;
+      width: 70%;
+      text-align: start;
+
+      &-sub {
+        margin: 0 auto;
+        width: 70%;
+        text-align: start;
+        font-weight: $fw-bold;
+      }
+    }
+  }
+}
