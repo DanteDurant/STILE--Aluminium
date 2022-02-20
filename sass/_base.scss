@@ -15,10 +15,6 @@ html {
   scroll-behavior: smooth;
 }
 
-p {
-  font-size: $fs-body;
-}
-
 body {
   background: $color-gray;
   margin: 0;
@@ -30,6 +26,11 @@ main {
   background-color: $color-white;
   padding-bottom: 5rem;
   margin-bottom: 60rem;
+}
+
+p {
+  font-size: $fs-body;
+  color: $color-primary_dark;
 }
 
 h1,
