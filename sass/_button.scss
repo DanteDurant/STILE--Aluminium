@@ -51,8 +51,8 @@
 
     &:active,
     &:focus {
-      transition: all 100ms;
-      border-bottom: 0.25rem solid $color-white;
+      transition: all 50ms;
+      border-bottom: 0.1rem solid $color-white;
     }
   }
 

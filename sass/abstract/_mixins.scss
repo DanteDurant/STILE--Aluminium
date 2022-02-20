@@ -38,7 +38,7 @@
   }
 }
 
-// ARROW BACKDROUND ////////////////////////////
+// ARROW BACKGROUND ////////////////////////////
 
 @mixin background-transparent($side) {
   @include center-vertical();
@@ -47,4 +47,15 @@
   width: 8rem;
   background-color: $color-white_transparent;
   border-radius: 7rem;
+}
+
+// SLIDE TEXTBOX  ////////////////////////////
+
+@mixin textbox-composition($side, $percentage) {
+  #{$side}: #{$percentage};
+  position: absolute;
+  background-color: $color-primary_dark-transparent;
+  border-radius: 2rem;
+  box-shadow: 0 0 5rem 5rem $color-primary_dark-transparent;
+  z-index: 9999;
 }
