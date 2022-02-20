@@ -19,6 +19,60 @@
     & section {
       @include flex-center;
       flex-basis: 100%;
+      position: relative;
+    }
+  }
+
+  &--textbox {
+    &__1 {
+      left: 17%;
+      position: absolute;
+      background-color: $color-primary_dark-transparent;
+      border-radius: 2rem;
+      box-shadow: 0 0 5rem 5rem $color-primary_dark-transparent;
+
+      & h1 {
+        margin: -3rem 0 0 15rem;
+        padding: 0;
+      }
+
+      & h2 {
+        margin: 0.4rem 0 0 15rem;
+      }
+    }
+
+    &__2 {
+      right: 17%;
+      position: absolute;
+      background-color: $color-primary_dark-transparent;
+      border-radius: 2rem;
+      box-shadow: 0 0 5rem 5rem $color-primary_dark-transparent;
+
+      & h1 {
+        margin: -1.7rem 0 0 0;
+        padding: 0;
+      }
+
+      & h2 {
+        margin: 0.4rem 0 0 0rem;
+      }
+    }
+    &__3 {
+      position: absolute;
+      left: 37%;
+      top: 14%;
+      background-color: $color-primary_dark-transparent;
+      border-radius: 2rem;
+      box-shadow: 0 0 5rem 5rem $color-primary_dark-transparent;
+
+      & h1 {
+        margin: -3rem 0 0 7rem;
+        padding: 0;
+      }
+
+      & h2 {
+        margin: 0.4rem 0 0 7rem;
+      }
     }
   }
 }

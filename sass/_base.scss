@@ -20,10 +20,24 @@ p {
 }
 
 body {
-  background: rgb(224, 224, 224);
+  background: $color-gray;
   margin: 0;
   width: 152rem;
   margin: 0 auto;
+}
+
+h1,
+h2 {
+  color: $color-gray;
+  line-height: 4rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
 }
 
 a {
@@ -32,4 +46,8 @@ a {
 
 .flex {
   @include flex-center;
+}
+
+.lazy-img {
+  filter: blur(1px);
 }
