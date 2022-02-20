@@ -11,20 +11,6 @@
   justify-content: space-between !important;
   transition: all 0.2s;
 
-  &--button {
-    &:hover {
-      border: none;
-      transform: translateY(-3px);
-      box-shadow: 0 1rem 2rem rgba(#000, 0.2);
-    }
-
-    &:active,
-    &:focus {
-      transform: translateY(-1px);
-      box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
-    }
-  }
-
   &--container {
     margin-right: 7vw;
   }
@@ -38,8 +24,4 @@
       width: 5rem;
     }
   }
-}
-
-.flex {
-  @include flex-center;
 }

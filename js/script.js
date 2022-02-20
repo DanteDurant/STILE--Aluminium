@@ -3,8 +3,8 @@
 ///////// SLIDER /////////////////////////////////////////////////////////
 
 const slider = document.querySelector(".carousel--slider");
-const leftArrow = document.querySelector(".arrow--left");
-const rightArrow = document.querySelector(".arrow--right");
+const leftArrow = document.querySelector(".arrow--left__control");
+const rightArrow = document.querySelector(" .arrow--right__control");
 const indicatorParents = document.querySelector(".controls ul");
 
 let sectionIndex = 0;

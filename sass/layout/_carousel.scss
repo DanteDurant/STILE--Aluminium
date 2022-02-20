@@ -25,12 +25,15 @@
 
 .arrow {
   @include center-vertical;
-  cursor: pointer;
   width: 5rem;
   height: 5rem;
 
+  &s {
+    cursor: pointer;
+  }
+
   &--left {
-    left: 8vw;
+    left: 8%;
     background-color: $color-primary_dark;
     clip-path: polygon(100% 100%, 100% 0, 40% 50%);
 
@@ -40,7 +43,7 @@
   }
 
   &--right {
-    right: 8vw;
+    right: 8%;
     background-color: $color-primary_dark;
     clip-path: polygon(0 100%, 0 0, 60% 50%);
 

@@ -28,12 +28,12 @@
     <header class="header flex">
       <a><img alt="STILE logo" class="header--logo" src="img/logo.jpg" /></a>
       <div class="header--container flex">
-        <button class="button header--button"><a>CONTACT US</a></button>
-        <button class="button header--button"><a>SERVICES</a></button>
+        <a class="button button--header">CONTACT US</a>
+        <a class="button button--header">SERVICES</a>
         <a href="https://www.facebook.com/StileAluminium/" target="_blank">
           <img
             alt="facbook logo"
-            class="svg header--logo__fb"
+            class="header--logo__fb button--fb"
             src="svg/facebook.svg"
           />
         </a>
@@ -42,11 +42,11 @@
 
     <nav class="navigation">
       <div class="navigation--box flex">
-        <button class="button"><a>TEXTBOX</a></button>
-        <button class="button"><a>TEXTBOX</a></button>
-        <button class="button"><a>TEXTBOX</a></button>
-        <button class="button"><a>TEXTBOX</a></button>
-        <button class="button"><a>TEXTBOX</a></button>
+        <a class="button button--navigation">TEXTBOX</a>
+        <a class="button button--navigation">TEXTBOX</a>
+        <a class="button button--navigation">TEXTBOX</a>
+        <a class="button button--navigation">TEXTBOX</a>
+        <a class="button button--navigation">TEXTBOX</a>
       </div>
     </nav>
 
@@ -67,10 +67,16 @@
           </section>
         </div>
         <div class="controls">
-          <div class="arrow--left__background"></div>
-          <div class="arrow arrow--left"></div>
-          <div class="arrow--right__background"></div>
-          <div class="arrow arrow--right"></div>
+          <div class="arrows">
+            <div class="arrow--left__control">
+              <div class="arrow--left__background"></div>
+              <div class="arrow arrow--left"></div>
+            </div>
+            <div class="arrow--right__control">
+              <div class="arrow--right__background"></div>
+              <div class="arrow arrow--right"></div>
+            </div>
+          </div>
           <ul class="ul">
             <li class="ul--li selected"></li>
             <li class="ul--li"></li>
@@ -86,7 +92,7 @@
         <div class="intro--video__container">
           <iframe
             class="intro--video__content"
-            src="https://player.vimeo.com/video/679431199?h=1c4a61c8e4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&portrait=0&byline=0 "
+            src="https://player.vimeo.com/video/679431199?h=1c4a61c8e4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479 &portrait=0&byline=0 "
             frameborder="0"
             allow="fullscreen; picture-in-picture"
             allowfullscreen
@@ -117,6 +123,8 @@
           autem. Officia ipsum consectetur adipisicing omnis iure temporibus at
           aliquam.
         </p>
+
+        <a class="button button--intro flex">FIND OUT MORE</a>
       </div>
     </div>
   </body>

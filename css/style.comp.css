@@ -1,31 +1,26 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
-
-:root {
-  --fw-reg: 300;
-  --fw-bold: 900;
-  --clr-light: #ffffff;
-  --clr-dark: #236299;
-  --clr-accent: #0080ff;
-  --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
-  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15); }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 /* General styles */
 html {
   font-size: 62.5%;
   font-family: "Source Sans Pro", sans-serif;
+  color: #333;
   font-weight: 400;
   scroll-behavior: smooth; }
 
+p {
+  font-size: 1.5rem; }
+
 body {
   background: #ccc;
-  margin: 0; }
+  margin: 0;
+  width: 152rem;
+  margin: 0 auto; }
 
 a {
   cursor: pointer; }
@@ -50,7 +45,7 @@ button:not(:last-child) {
 /**************************/
 .header {
   height: 10rem;
-  width: 100vw;
+  width: 100%;
   background-color: #fff;
   margin: 0;
   align-items: center;
@@ -78,7 +73,7 @@ button:not(:last-child) {
   align-items: center; }
 
 .navigation {
-  width: 100vw;
+  width: 100%;
   height: 8rem;
   background-color: #0080ff; }
   .navigation--box {
@@ -164,24 +159,44 @@ button:not(:last-child) {
   .ul .selected {
     background: #fff; }
 
-@font-face {
-  font-family: "MyWebFont";
-  src: url("WebFont.eot");
-  src: url("WebFont.eot?#iefix") format("embedded-opentype"), url("WebFont.woff") format("woff"), url("WebFont.ttf") format("truetype"), url("WebFont.svg#webfont") format("svg"); }
-
 .intro {
   width: 100%;
   height: 50rem;
   background-color: #fff; }
   .intro--video {
+    position: relative;
     width: 50%;
     height: 100%;
-    background-color: aqua; }
+    justify-self: flex-end; }
+    .intro--video__container {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 2.5rem;
+      width: 65rem;
+      margin-left: auto; }
+    .intro--video__content {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
   .intro--textbox {
     width: 50%;
+    height: min-content;
     text-align: center; }
     .intro--textbox__heading {
-      font-family: "WebFont", Arial, sans-serif;
-      font-size: 10rem;
-      margin: 0;
-      padding: 0; }
+      width: 28rem;
+      transform: translateX(-11rem) translateY(2.5rem); }
+      .intro--textbox__heading-sub {
+        vertical-align: middle;
+        color: #236097;
+        font-size: 4rem;
+        transform: translateX(5rem);
+        margin-bottom: 2rem; }
+    .intro--textbox__text {
+      margin: 0 auto 1rem auto;
+      width: 70%;
+      text-align: start; }
+      .intro--textbox__text-sub {
+        margin: 0 auto;
+        width: 70%;
+        text-align: start;
+        font-weight: 700; }

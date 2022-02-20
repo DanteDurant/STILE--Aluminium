@@ -9,7 +9,6 @@
 html {
   font-size: 62.5%;
   font-family: "Source Sans Pro", sans-serif;
-  color: #333;
   font-weight: 400;
   scroll-behavior: smooth; }
 
@@ -17,7 +16,7 @@ p {
   font-size: 1.5rem; }
 
 body {
-  background: #ccc;
+  background: #e0e0e0;
   margin: 0;
   width: 152rem;
   margin: 0 auto; }
@@ -25,20 +24,62 @@ body {
 a {
   cursor: pointer; }
 
-.button {
-  height: 3.5rem;
-  padding: 0 3rem;
-  border-radius: 0;
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.button, .button:link, .button:visited {
+  padding: 1rem 3rem;
   border: none;
   background-color: #0080ff;
   color: #fff;
-  font-weight: 700; }
-  .button:hover {
-    transition: all 350ms;
-    border-bottom: 0.5rem solid #fff; }
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: all 300ms; }
 
-button:not(:last-child) {
+.button:not(:last-child) {
   margin-right: 3rem; }
+
+.button--header:hover {
+  background-color: #236097; }
+
+.button--header:active, .button--header:focus {
+  transition: all 100ms;
+  transform: translateY(0.2rem); }
+
+.button--fb {
+  transition: all 200ms; }
+  .button--fb:hover {
+    transform: scale(1.1); }
+  .button--fb:active, .button--fb:focus {
+    transform: none; }
+
+.button--navigation:hover {
+  border-bottom: 0.5rem solid #fff; }
+
+.button--navigation:active, .button--navigation:focus {
+  transition: all 100ms;
+  border-bottom: 0.25rem solid #fff; }
+
+.button--intro {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: normal;
+  left: 15%;
+  padding-right: 1rem; }
+  .button--intro::after {
+    content: "";
+    clip-path: polygon(0 100%, 0 0, 60% 50%);
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #fff;
+    margin-left: 2rem; }
+  .button--intro:hover {
+    background-color: #236097; }
+  .button--intro:active, .button--intro:focus {
+    transition: all 100ms;
+    transform: translateX(0.3rem); }
 
 /**************************/
 /* HEADER */
@@ -51,13 +92,6 @@ button:not(:last-child) {
   align-items: center;
   justify-content: space-between !important;
   transition: all 0.2s; }
-  .header--button:hover {
-    border: none;
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .header--button:active, .header--button:focus {
-    transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
   .header--container {
     margin-right: 7vw; }
   .header--logo {
@@ -66,11 +100,6 @@ button:not(:last-child) {
     .header--logo__fb {
       margin-left: 1rem;
       width: 5rem; }
-
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
 
 .navigation {
   width: 100%;
@@ -107,31 +136,32 @@ button:not(:last-child) {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;
   width: 5rem;
   height: 5rem; }
+  .arrows {
+    cursor: pointer; }
   .arrow--left {
-    left: 8vw;
+    left: 8%;
     background-color: #236097;
     clip-path: polygon(100% 100%, 100% 0, 40% 50%); }
     .arrow--left__background {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: 8vw;
+      left: 8%;
       height: 8rem;
       width: 8rem;
       background-color: #ffffff5d;
       border-radius: 7rem; }
   .arrow--right {
-    right: 8vw;
+    right: 8%;
     background-color: #236097;
     clip-path: polygon(0 100%, 0 0, 60% 50%); }
     .arrow--right__background {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 8vw;
+      right: 8%;
       height: 8rem;
       width: 8rem;
       background-color: #ffffff5d;
@@ -161,14 +191,17 @@ button:not(:last-child) {
 
 .intro {
   width: 100%;
-  height: 50rem;
-  background-color: #fff; }
+  height: 55rem;
+  background-image: linear-gradient(white, rgba(255, 255, 255, 0.76)), url("/img/img3.jpg");
+  background-size: cover; }
   .intro--video {
     position: relative;
     width: 50%;
-    height: 100%;
-    justify-self: flex-end; }
+    height: 100%; }
     .intro--video__container {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       position: relative;
       padding-bottom: 56.25%;
       padding-top: 2.5rem;
@@ -179,8 +212,9 @@ button:not(:last-child) {
       width: 100%;
       height: 100%; }
   .intro--textbox {
+    position: relative;
     width: 50%;
-    height: min-content;
+    height: max-content;
     text-align: center; }
     .intro--textbox__heading {
       width: 28rem;
@@ -196,7 +230,7 @@ button:not(:last-child) {
       width: 70%;
       text-align: start; }
       .intro--textbox__text-sub {
-        margin: 0 auto;
+        margin: 0 auto 2.4rem auto;
         width: 70%;
         text-align: start;
         font-weight: 700; }
