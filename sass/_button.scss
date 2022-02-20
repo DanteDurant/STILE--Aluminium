@@ -84,4 +84,12 @@
       transform: translateX(0.3rem);
     }
   }
+
+  // OVERVIEW //////////////////////////////////////
+
+  &--overview {
+    height: 10rem;
+    width: 5rem;
+    font-size: 5rem;
+  }
 }

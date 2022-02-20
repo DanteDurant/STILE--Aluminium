@@ -41,7 +41,7 @@ a {
   align-items: center; }
 
 .lazy-img {
-  filter: blur(1px); }
+  filter: blur(4px); }
 
 .button, .button:link, .button:visited {
   padding: 1rem 3rem;
@@ -73,8 +73,8 @@ a {
   border-bottom: 0.5rem solid #fff; }
 
 .button--navigation:active, .button--navigation:focus {
-  transition: all 100ms;
-  border-bottom: 0.25rem solid #fff; }
+  transition: all 50ms;
+  border-bottom: 0.1rem solid #fff; }
 
 .button--intro {
   position: absolute;
@@ -151,7 +151,8 @@ a {
     position: absolute;
     background-color: #2361977e;
     border-radius: 2rem;
-    box-shadow: 0 0 5rem 5rem #2361977e; }
+    box-shadow: 0 0 5rem 5rem #2361977e;
+    z-index: 9999; }
     .carousel--textbox__1 h1 {
       margin: -3rem 0 0 15rem;
       padding: 0; }
@@ -162,12 +163,26 @@ a {
     position: absolute;
     background-color: #2361977e;
     border-radius: 2rem;
-    box-shadow: 0 0 5rem 5rem #2361977e; }
+    box-shadow: 0 0 5rem 5rem #2361977e;
+    z-index: 9999; }
     .carousel--textbox__2 h1 {
-      margin: -1.7rem 0 0 0;
+      margin-top: -1.7rem;
       padding: 0; }
     .carousel--textbox__2 h2 {
-      margin: 0.4rem 0 0 0rem; }
+      margin-top: 0.4rem; }
+  .carousel--textbox__3 {
+    left: 37%;
+    position: absolute;
+    background-color: #2361977e;
+    border-radius: 2rem;
+    box-shadow: 0 0 5rem 5rem #2361977e;
+    z-index: 9999;
+    top: 14%; }
+    .carousel--textbox__3 h1 {
+      margin: -3rem 0 0 7rem;
+      padding: 0; }
+    .carousel--textbox__3 h2 {
+      margin: 0.4rem 0 0 7rem; }
 
 .arrow {
   position: absolute;

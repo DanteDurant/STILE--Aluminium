@@ -26,6 +26,12 @@ body {
   margin: 0 auto;
 }
 
+main {
+  background-color: $color-white;
+  padding-bottom: 5rem;
+  margin-bottom: 60rem;
+}
+
 h1,
 h2 {
   color: $color-gray;

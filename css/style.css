@@ -21,6 +21,11 @@ body {
   width: 152rem;
   margin: 0 auto; }
 
+main {
+  background-color: #fff;
+  padding-bottom: 5rem;
+  margin-bottom: 60rem; }
+
 h1,
 h2 {
   color: #e7e7e7;
@@ -94,6 +99,11 @@ a {
   .button--intro:active, .button--intro:focus {
     transition: all 100ms;
     transform: translateX(0.3rem); }
+
+.button--overview {
+  height: 10rem;
+  width: 5rem;
+  font-size: 5rem; }
 
 /**************************/
 /* HEADER */
@@ -241,10 +251,17 @@ a {
   .ul .selected {
     background: #fff; }
 
+.lazy-background {
+  background-image: linear-gradient(white, rgba(255, 255, 255, 0.76)), url("/img/background1-lazy.jpg");
+  filter: blur(4px); }
+
+.lazy-background.visible {
+  background-image: linear-gradient(white, rgba(255, 255, 255, 0.76)), url("/img/background1.jpg");
+  filter: none; }
+
 .intro {
   width: 100%;
   height: 55rem;
-  background-image: linear-gradient(white, rgba(255, 255, 255, 0.76)), url("/img/background1-lazy.jpg");
   background-size: cover; }
   .intro--video {
     position: relative;
