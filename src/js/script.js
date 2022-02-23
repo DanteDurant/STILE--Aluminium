@@ -1,5 +1,18 @@
 'use strict';
 
+// SLIDER COMPONENT ////////////////////////////////////////////////
+
+const slider = document.querySelector('.carousel--slider');
+const leftArrow = document.querySelector('.arrow--left__control');
+const rightArrow = document.querySelector(' .arrow--right__control');
+const indicatorParents = document.querySelector('.controls ul');
+
+//  TABBED COMPONENT ///////////
+
+// const tabs = document.querySelectorAll('.overview--tab');
+// const tabsContainer = document.querySelector('.overview--tab__container');
+// const tabsContent = document.querySelectorAll('.overview--content');
+
 // Lazy loading images /////////////////////
 
 const imgTargets = document.querySelectorAll('img[data-src]');
@@ -55,11 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ///////// SLIDER ////////////////////////////////////////////////////////////////////
 
-const slider = document.querySelector('.carousel--slider');
-const leftArrow = document.querySelector('.arrow--left__control');
-const rightArrow = document.querySelector(' .arrow--right__control');
-const indicatorParents = document.querySelector('.controls ul');
-
 let sectionIndex = 0;
 
 // AUTO-PLAY ////////////////////////////
@@ -104,4 +112,51 @@ rightArrow.addEventListener('click', () => {
   sectionIndex = sectionIndex < 3 ? sectionIndex + 1 : 0;
   setIndex();
   arrowIndex();
+});
+
+// Tabbed component  ////////////////////////////////////////////////////////////////
+
+// tabsContainer.addEventListener('click', function (e) {
+//   const clicked = e.target.closest('.overview--tab');
+
+//   // Guard clause
+//   if (!clicked) return;
+
+//   // Remove active classes
+//   tabs.forEach(t => t.classList.remove('overview--tab__active'));
+//   tabsContent.forEach(c => c.classList.remove('overview--content__active'));
+
+//   // Activate tab
+//   clicked.classList.add('overview--tab--active');
+
+//   // Activate content area
+//   document
+//     .querySelector(`.overview--content__${clicked.dataset.tab}`)
+//     .classList.add('overview--content__active');
+//   console.log(clicked.dataset.tab);
+// });
+
+// Tabbed component
+
+const tabs = document.querySelectorAll('.overview--tab');
+const tabsContainer = document.querySelector('.overview--tab__container');
+const tabsContent = document.querySelectorAll('.overview--content');
+
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.overview--tab');
+
+  // Guard clause
+  if (!clicked) return;
+
+  // Remove active classes
+  tabs.forEach(t => t.classList.remove('overview--tab__active'));
+  tabsContent.forEach(c => c.classList.remove('overview--content__active'));
+
+  // Activate tab
+  clicked.classList.add('overview--tab__active');
+
+  // Activate content area
+  document
+    .querySelector(`.overview--content__${clicked.dataset.tab}`)
+    .classList.add('overview--content__active');
 });
