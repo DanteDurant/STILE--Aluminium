@@ -6,21 +6,23 @@
   background-color: $color-gray;
 
   &--tab {
-    margin-right: 2.5rem;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
 
     &__container {
       display: flex;
       justify-content: center;
-    }
-
-    & span {
-      margin-right: 1rem;
-      font-weight: 600;
-      display: inline-block;
+      background-color: $color-white_transparent;
     }
 
     &__1 {
+      background-color: $color-primary;
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-primary_dark;
+      }
+    }
+    &__2 {
       background-color: $color-primary;
       color: $color-white;
 
@@ -40,7 +42,7 @@
     }
 
     &__active {
-      transform: translateY(-66%);
+      transform: translateY(-30%);
     }
   }
 
