@@ -7,11 +7,14 @@
 
   &--tab {
     // transform: translateY(-50%);
+    height: min-content;
+    margin: auto 0;
 
     &__container {
       display: flex;
       justify-content: center;
       background-color: $color-white_transparent;
+      height: 5rem;
     }
 
     &__1 {
@@ -34,7 +37,6 @@
     &__3 {
       background-color: $color-primary;
       color: $color-white;
-      margin: 0;
 
       &:hover {
         background-color: $color-primary_dark;
@@ -42,7 +44,7 @@
     }
 
     &__active {
-      transform: translateY(-30%);
+      transform: translateY(-0.7rem);
     }
   }
 
