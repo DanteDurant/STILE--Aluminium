@@ -54,6 +54,8 @@
       transition: all 50ms;
       border-bottom: 0.1rem solid $color-white;
     }
+
+    background-color: $color-primary_dark;
   }
 
   // INTRO BUTTON//////////////////////////////////////
@@ -66,7 +68,7 @@
     padding-right: 1rem;
 
     &::after {
-      content: "";
+      content: '';
       clip-path: polygon(0 100%, 0 0, 60% 50%);
       height: 1.5rem;
       width: 1.5rem;
@@ -91,5 +93,10 @@
     height: 10rem;
     width: 5rem;
     font-size: 5rem;
+  }
+
+  &--svg {
+    width: 5rem;
+    filter: $svg-white;
   }
 }
