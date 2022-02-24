@@ -1,14 +1,61 @@
 /* OPERATIONS */
 .overview {
-  max-width: 100rem;
-  margin: 0 auto;
+  position: relative;
+  max-width: 115rem;
+  margin-left: 11rem;
   height: 50rem;
   background-color: $color-primary_dark;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 50rem;
+    width: 100rem;
+    background-color: inherit;
+    left: -100rem;
+    bottom: 0;
+  }
+
+  &--header {
+    padding-top: 4rem;
+    position: relative;
+    font-weight: 600;
+    width: max-content;
+
+    &::after {
+      content: '';
+      // position: absolute;
+      // top: 0;
+      @include center-horizontal;
+      bottom: -1.5rem;
+      left: 50%;
+      right: 0;
+      width: 45rem;
+      height: 0.5rem;
+      background-color: $color-white;
+    }
+
+    & strong {
+      font-weight: 900;
+    }
+    &__sub {
+      font-size: 3.5rem;
+      font-weight: 500;
+      align-self: start;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &--content p {
+    grid-column: 2;
+    color: inherit;
+  }
 
   &--tab {
     &__container {
       display: flex;
-      justify-content: center;
+      justify-content: start;
+      margin-left: 1rem;
       background-color: transparent;
       height: 11rem;
       margin-bottom: 2rem;
@@ -45,38 +92,30 @@
         border-top: 1.8rem solid #fff;
       }
     }
+
+    &__image {
+      display: block;
+      width: 20rem;
+      height: auto;
+    }
   }
 
   &--content {
     transition: all 300ms;
     display: none;
     font-size: 1.7rem;
-    padding: 2.5rem 7rem 6.5rem 7rem;
+    padding: 7rem 0rem 6.5rem 0rem;
+    width: 70rem;
     color: $color-white;
+
+    // &__image {
+    //   width: 20rem;
+    //   height: auto;
+    // }
 
     &__active {
       display: flex;
       flex-direction: column;
     }
-  }
-
-  &--header {
-    font-weight: 600;
-    padding: 2rem 0 0 2rem;
-
-    & strong {
-      font-weight: 900;
-    }
-    &__sub {
-      font-size: 2.25rem;
-      font-weight: 500;
-      align-self: center;
-      margin-bottom: 2rem;
-    }
-  }
-
-  &--content p {
-    grid-column: 2;
-    color: inherit;
   }
 }

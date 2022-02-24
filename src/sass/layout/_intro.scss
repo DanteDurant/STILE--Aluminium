@@ -27,8 +27,9 @@
     height: 100%;
 
     &__container {
-      @include center-vertical;
       position: relative;
+      top: 50%;
+      transform: translateY(-55%);
       padding-bottom: 56.25%;
       padding-top: 2.5rem;
       width: 65rem;
@@ -47,6 +48,7 @@
     width: 50%;
     height: max-content;
     text-align: center;
+    transform: translateY(-1.6rem);
 
     &__heading {
       width: 28rem;
