@@ -3,17 +3,18 @@
   position: relative;
   max-width: 115rem;
   margin-left: 11rem;
+  margin-top: 5rem;
   height: 50rem;
   background-color: $color-primary_dark;
 
   &::before {
     content: '';
     position: absolute;
-    height: 50rem;
-    width: 100rem;
     background-color: inherit;
-    left: -100rem;
+    height: inherit;
     bottom: 0;
+    width: 50vw;
+    left: -50vw;
   }
 
   &--header {
@@ -92,15 +93,10 @@
         border-top: 1.8rem solid #fff;
       }
     }
-
-    &__image {
-      display: block;
-      width: 20rem;
-      height: auto;
-    }
   }
 
   &--content {
+    // position: relative;
     transition: all 300ms;
     display: none;
     font-size: 1.7rem;
@@ -108,14 +104,18 @@
     width: 70rem;
     color: $color-white;
 
-    // &__image {
-    //   width: 20rem;
-    //   height: auto;
-    // }
+    &__image {
+      position: absolute;
+      right: -20rem;
+      top: 5rem;
+      width: 40rem;
+      height: 40rem;
+      object-fit: cover;
+    }
 
     &__active {
       display: flex;
-      flex-direction: column;
+      // flex-direction: column;
     }
   }
 }
