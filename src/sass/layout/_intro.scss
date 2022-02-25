@@ -29,11 +29,11 @@
     &__container {
       position: relative;
       top: 50%;
-      transform: translateY(-55%);
-      padding-bottom: 56.25%;
-      padding-top: 2.5rem;
+      transform: translateY(-50%);
+      padding-bottom: 48.25%;
       width: 65rem;
       margin-left: auto;
+      box-shadow: $box-shadow;
     }
 
     &__content {

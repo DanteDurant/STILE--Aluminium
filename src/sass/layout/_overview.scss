@@ -1,7 +1,7 @@
 /* OPERATIONS */
 .overview {
   position: relative;
-  max-width: 115rem;
+  max-width: 108rem;
   margin-left: 11rem;
   margin-top: 5rem;
   height: 50rem;
@@ -48,8 +48,11 @@
   }
 
   &--content p {
-    grid-column: 2;
     color: inherit;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &--tab {
@@ -75,7 +78,7 @@
     }
 
     &:not(:last-child) {
-      margin-right: 10rem;
+      margin-right: 8rem;
     }
 
     &__active {
@@ -100,7 +103,7 @@
     display: none;
     font-size: 1.7rem;
     padding: 7rem 0rem 6.5rem 0rem;
-    width: 70rem;
+    width: 77rem;
     color: $color-white;
 
     &__image {
@@ -110,6 +113,7 @@
       width: 40rem;
       height: 40rem;
       object-fit: cover;
+      box-shadow: $box-shadow;
     }
 
     &__active {
