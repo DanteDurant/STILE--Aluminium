@@ -52,7 +52,3 @@ a {
 .flex {
   @include flex-center;
 }
-
-.lazy-img {
-  filter: blur(4px);
-}

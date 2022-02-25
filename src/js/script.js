@@ -1,6 +1,6 @@
 'use strict';
 
-// SLIDER COMPONENT ////////////////////////////////////////////////
+// SLIDER COMPONENT /////////////
 
 const slider = document.querySelector('.carousel--slider');
 const leftArrow = document.querySelector('.arrow--left__control');
@@ -9,38 +9,42 @@ const indicatorParents = document.querySelector('.controls ul');
 
 //  TABBED COMPONENT ///////////
 
-// const tabs = document.querySelectorAll('.overview--tab');
-// const tabsContainer = document.querySelector('.overview--tab__container');
-// const tabsContent = document.querySelectorAll('.overview--content');
+const tabs = document.querySelectorAll('.overview--tab');
+const tabsContainer = document.querySelector('.overview--tab__container');
+const tabsContent = document.querySelectorAll('.overview--content');
 
 // Lazy loading images /////////////////////
 
-const imgTargets = document.querySelectorAll('img[data-src]');
-
-const loadImg = function (entries, observer) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) return;
-
-  // Replace src with data-src
-  entry.target.src = entry.target.dataset.src;
-
-  entry.target.addEventListener('load', function () {
-    entry.target.classList.remove('lazy-img');
-  });
-
-  observer.unobserve(entry.target);
-};
-
-const imgObserver = new IntersectionObserver(loadImg, {
-  root: null,
-  threshold: 0,
-  rootMargin: '200px',
+var lazyLoadInstance = new LazyLoad({
+  elements_selector: '.lazy-img',
 });
 
-imgTargets.forEach(img => imgObserver.observe(img));
+// const imgTargets = document.querySelectorAll('img[data-src]');
 
-// LAZY LOADING BACKFROUNDS  /////////////////
+// const loadImg = (entries, observer) => {
+//   const [entry] = entries;
+
+//   if (!entry.isIntersecting) return;
+
+//   // Replace src with data-src
+//   entry.target.src = entry.target.dataset.src;
+
+//   entry.target.addEventListener('load', function () {
+//     entry.target.classList.remove('lazy-img');
+//   });
+
+//   observer.unobserve(entry.target);
+// };
+
+// const imgObserver = new IntersectionObserver(loadImg, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: '200px',
+// });
+
+// imgTargets.forEach(img => imgObserver.observe(img));
+
+// LAZY LOADING BACKGROUNDS  /////////////////
 
 document.addEventListener('DOMContentLoaded', function () {
   let lazyBackgrounds = [].slice.call(
@@ -88,7 +92,7 @@ const arrowIndex = () => {
   indicatorParents.children[sectionIndex].classList.add('selected');
 };
 
-// BULLET FUNTIONALITY //////////////////
+// BULLET FUNCTIONALITY //////////////////
 
 document.querySelectorAll('.controls li').forEach((indicator, ind) => {
   indicator.addEventListener('click', function () {
@@ -98,7 +102,7 @@ document.querySelectorAll('.controls li').forEach((indicator, ind) => {
   });
 });
 
-// LEFT ARROW FUNTIONALITY //////////////
+// LEFT ARROW FUNCTIONALITY //////////////
 
 leftArrow.addEventListener('click', () => {
   sectionIndex = sectionIndex > 0 ? sectionIndex - 1 : 3;
@@ -106,7 +110,7 @@ leftArrow.addEventListener('click', () => {
   indicatorParents.children[sectionIndex].classList.add('selected');
 });
 
-// RIGHT ARROW FUNTIONALITY /////////////
+// RIGHT ARROW FUNCTIONALITY /////////////
 
 rightArrow.addEventListener('click', () => {
   sectionIndex = sectionIndex < 3 ? sectionIndex + 1 : 0;
@@ -114,33 +118,7 @@ rightArrow.addEventListener('click', () => {
   arrowIndex();
 });
 
-// Tabbed component  ////////////////////////////////////////////////////////////////
-
-// tabsContainer.addEventListener('click', function (e) {
-//   const clicked = e.target.closest('.overview--tab');
-
-//   // Guard clause
-//   if (!clicked) return;
-
-//   // Remove active classes
-//   tabs.forEach(t => t.classList.remove('overview--tab__active'));
-//   tabsContent.forEach(c => c.classList.remove('overview--content__active'));
-
-//   // Activate tab
-//   clicked.classList.add('overview--tab--active');
-
-//   // Activate content area
-//   document
-//     .querySelector(`.overview--content__${clicked.dataset.tab}`)
-//     .classList.add('overview--content__active');
-//   console.log(clicked.dataset.tab);
-// });
-
-// Tabbed component
-
-const tabs = document.querySelectorAll('.overview--tab');
-const tabsContainer = document.querySelector('.overview--tab__container');
-const tabsContent = document.querySelectorAll('.overview--content');
+// Tabbed component //////////////////////////////////////////////////
 
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.overview--tab');

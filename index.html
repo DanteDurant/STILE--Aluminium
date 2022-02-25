@@ -53,7 +53,7 @@
         <a class="button button--navigation">TEXTBOX</a>
       </div>
     </nav>
-
+    <!-- src/img/slide1-lazy.jpg" -->
     <div class="container">
       <div class="carousel">
         <div class="carousel--slider">
@@ -64,10 +64,8 @@
               <h2>MATERIALS</h2>
             </div>
             <img
-              class="carousel--image lazy-img"
-              src="
-              src/img/slide1-lazy.jpg"
-              data-src="https://i.ibb.co/njHWvwc/slide1.jpg"
+              class="carousel--image"
+              src="src/img/slide1.jpg"
               alt="stacked aluminium"
             />
           </section>
@@ -208,7 +206,11 @@
               vitae obcaecati?
             </p>
           </div>
-          <img class="overview--content__image" src="src/img/img1.jpg" />
+          <img
+            class="overview--content__image lazy-img"
+            src="https://i.ibb.co/ZdycQhk/img1-lazy.jpg"
+            data-src="https://i.ibb.co/PMSmCNx/img1.jpg"
+          />
         </div>
 
         <div class="overview--content overview--content__2">
@@ -226,7 +228,11 @@
               beatae?
             </p>
           </div>
-          <img class="overview--content__image" src="src/img/img2.jpg" />
+          <img
+            class="overview--content__image lazy-img"
+            src="https://i.ibb.co/9TNKztJ/img2-lazy.jpg"
+            data-src="https://i.ibb.co/StVTHV1/img2.jpg"
+          />
         </div>
 
         <div class="overview--content overview--content__3">
@@ -243,9 +249,14 @@
               dolorum consectetur numquam, optio libero.
             </p>
           </div>
-          <img class="overview--content__image" src="src/img/img3.jpg" />
+          <img
+            class="overview--content__image lazy-img"
+            src="https://i.ibb.co/PxfT1YK/img3-lazy.jpg"
+            data-src="https://i.ibb.co/HnXQN8q/img3.jpg"
+          />
         </div>
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>
   </body>
 </html>
