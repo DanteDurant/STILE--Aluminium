@@ -1,11 +1,12 @@
 /* OPERATIONS */
 .overview {
   position: relative;
-  max-width: 108rem;
-  margin-left: 11rem;
+  max-width: 119rem;
   margin-top: 5rem;
   height: 50rem;
   background-color: $color-primary_dark;
+  background-image: url('/src/img/STILE.png');
+  background-size: cover;
 
   &::before {
     content: '';
@@ -18,7 +19,7 @@
   }
 
   &--header {
-    padding-top: 4rem;
+    padding: 4rem 0 0 11rem;
     position: relative;
     font-weight: 600;
     width: max-content;
@@ -27,8 +28,7 @@
       content: '';
       @include center-horizontal;
       bottom: -1.5rem;
-      left: 50%;
-      right: 0;
+      left: 60%;
       width: 45rem;
       height: 0.5rem;
       background-color: $color-white;
@@ -57,7 +57,7 @@
     &__container {
       display: flex;
       justify-content: start;
-      margin-left: 1rem;
+      margin-left: 12rem;
       background-color: transparent;
       height: 11rem;
       margin-bottom: 2rem;
@@ -100,8 +100,8 @@
     transition: all 300ms;
     display: none;
     font-size: 1.7rem;
-    padding: 7rem 0rem 6.5rem 0rem;
-    width: 77rem;
+    padding: 7rem 0rem 6.5rem 11rem;
+    width: 90rem;
     color: $color-white;
 
     &__image {

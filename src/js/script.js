@@ -51,11 +51,11 @@ let sectionIndex = 0;
 
 // AUTO-PLAY ////////////////////////////
 
-// setInterval(() => {
-//   sectionIndex = sectionIndex < 3 ? sectionIndex + 1 : 0;
-//   setIndex();
-//   arrowIndex();
-// }, 9000);
+setInterval(() => {
+  sectionIndex = sectionIndex < 3 ? sectionIndex + 1 : 0;
+  setIndex();
+  arrowIndex();
+}, 9000);
 
 // REFACTORS ////////////////////////////
 
