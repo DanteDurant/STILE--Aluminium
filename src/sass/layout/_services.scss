@@ -1,0 +1,33 @@
+.services {
+  &--intro {
+    margin-top: 5rem;
+    margin-left: 11rem;
+    width: 105rem;
+    &__heading {
+      position: relative;
+      width: max-content;
+      font-size: 4.5rem;
+      font-weight: 600;
+      color: $color-primary_dark;
+
+      & strong {
+        font-weight: 900;
+      }
+
+      &::after {
+        content: '';
+        @include center-horizontal;
+        bottom: -1.5rem;
+        left: 50%;
+        width: 29rem;
+        height: 0.5rem;
+        background-color: $color-primary_dark;
+      }
+    }
+
+    & p {
+      padding-top: 4rem;
+      font-weight: 600;
+    }
+  }
+}
