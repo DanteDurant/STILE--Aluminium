@@ -19,31 +19,6 @@ var lazyLoadInstance = new LazyLoad({
   elements_selector: '.lazy-img',
 });
 
-// const imgTargets = document.querySelectorAll('img[data-src]');
-
-// const loadImg = (entries, observer) => {
-//   const [entry] = entries;
-
-//   if (!entry.isIntersecting) return;
-
-//   // Replace src with data-src
-//   entry.target.src = entry.target.dataset.src;
-
-//   entry.target.addEventListener('load', function () {
-//     entry.target.classList.remove('lazy-img');
-//   });
-
-//   observer.unobserve(entry.target);
-// };
-
-// const imgObserver = new IntersectionObserver(loadImg, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: '200px',
-// });
-
-// imgTargets.forEach(img => imgObserver.observe(img));
-
 // LAZY LOADING BACKGROUNDS  /////////////////
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -76,11 +51,11 @@ let sectionIndex = 0;
 
 // AUTO-PLAY ////////////////////////////
 
-setInterval(() => {
-  sectionIndex = sectionIndex < 3 ? sectionIndex + 1 : 0;
-  setIndex();
-  arrowIndex();
-}, 9000);
+// setInterval(() => {
+//   sectionIndex = sectionIndex < 3 ? sectionIndex + 1 : 0;
+//   setIndex();
+//   arrowIndex();
+// }, 9000);
 
 // REFACTORS ////////////////////////////
 

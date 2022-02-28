@@ -24,7 +24,12 @@
   }
 
   &--textbox {
-    &__1 {
+    &__png {
+      height: 15rem;
+      width: auto;
+    }
+
+    &__left {
       @include textbox-composition(left, 17%);
 
       & h1 {
@@ -37,7 +42,7 @@
       }
     }
 
-    &__2 {
+    &__right {
       @include textbox-composition(right, 17%);
 
       & h1 {
@@ -49,7 +54,7 @@
         margin-top: 0.4rem;
       }
     }
-    &__3 {
+    &__center {
       @include textbox-composition(left, 37%);
       top: 14%;
 
