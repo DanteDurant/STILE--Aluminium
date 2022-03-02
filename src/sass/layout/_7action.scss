@@ -1,0 +1,76 @@
+.action {
+  height: 75rem;
+  width: 100%;
+  background-color: $color-white;
+
+  &--heading {
+    color: $color-primary_dark;
+    font-size: 4.5rem;
+    font-weight: 600;
+    & strong {
+      font-weight: 900;
+    }
+  }
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary,
+    $color-primary_dark
+  );
+}
+
+.book {
+  // THe Solid Color-Gradient technique
+  background-image: linear-gradient(
+      90deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 45.5%,
+      transparent 45%
+    ),
+    linear-gradient(
+      90deg,
+      rgba($color-primary_dark, 0.7) 100%,
+      rgba($color-primary_dark, 0.7) 54.5%,
+      transparent 55%
+    ),
+    url('/src/img/background1.jpg');
+
+  // background-size: 100%;
+  //same thing as
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(black, 0.2);
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+  }
+}
+
+// grid /////////////////////////////////////////
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+
+  // ^(starts with), *(contains), $(ends with)
+  [class^='col-'] {
+    // background-color: orangered;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: 6rem;
+    }
+  }
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+}

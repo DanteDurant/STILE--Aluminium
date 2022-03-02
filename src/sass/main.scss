@@ -1,13 +1,17 @@
 @import 'src/sass/abstract/variables';
 @import 'src/sass/abstract/mixins';
-@import 'src/sass/base';
-@import 'src/sass/button';
 
-@import 'src/sass/layout/header';
-@import 'src/sass/layout/navigation';
-@import 'src/sass/layout/carousel';
-@import 'src/sass/layout/intro';
-@import 'src/sass/layout/overview';
-@import 'src/sass/layout/services';
+@import 'src/sass/base/base';
+
+@import 'src/sass/components/button';
+@import 'src/sass/components/form';
+
+@import 'src/sass/layout/1header';
+@import 'src/sass/layout/2navigation';
+@import 'src/sass/layout/3carousel';
+@import 'src/sass/layout/4intro';
+@import 'src/sass/layout/5overview';
+@import 'src/sass/layout/6services';
+@import 'src/sass/layout/7action';
 
 @import 'src/sass/abstract/media';

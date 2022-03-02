@@ -32,8 +32,8 @@
         ><img alt="STILE logo" class="header--logo" src="src/img/logo.jpg"
       /></a>
       <div class="header--container flex">
-        <a class="button button--header">CONTACT US</a>
-        <a class="button button--header">SERVICES</a>
+        <a class="button button--normal">CONTACT US</a>
+        <a class="button button--normal">SERVICES</a>
         <a href="https://www.facebook.com/StileAluminium/" target="_blank">
           <img
             alt="facebook logo"
@@ -54,7 +54,7 @@
       </div>
     </nav>
     <!-- src/img/slide1-lazy.jpg" -->
-    <div class="container">
+    <section class="carousel--container">
       <div class="carousel">
         <div class="carousel--slider">
           <section>
@@ -144,10 +144,10 @@
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
     <main>
-      <div class="intro lazy-background flex">
+      <section class="intro lazy-background flex">
         <div class="intro--video">
           <div class="intro--video__container">
             <iframe
@@ -186,9 +186,9 @@
 
           <a class="button button--intro flex">FIND OUT MORE</a>
         </div>
-      </div>
+      </section>
 
-      <div class="overview">
+      <section class="overview">
         <h1 class="overview--header">PRODUCT <strong>OVERVIEW</strong></h1>
         <div class="overview--tab__container">
           <button
@@ -294,9 +294,9 @@
             data-src="https://i.ibb.co/HnXQN8q/img3.jpg"
           />
         </div>
-      </div>
+      </section>
 
-      <div class="services">
+      <section class="services">
         <div class="services--intro">
           <h1 class="services--intro__heading">
             OUR <strong>SERVICES</strong>
@@ -352,7 +352,65 @@
             </a>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="action">
+        <section class="section-book">
+          <div class="row">
+            <div class="book">
+              <div class="book__form">
+                <form action="#" class="form">
+                  <div class="u-margin-bottom-medium">
+                    <h1 class="action--heading">
+                      INQUERY <strong>FORM</strong>
+                    </h1>
+                  </div>
+
+                  <div class="form__group">
+                    <input
+                      type="text"
+                      class="form__input"
+                      placeholder="Full Name"
+                      id="name"
+                      required
+                    />
+                    <label for="name" class="form__label">Full Name</label>
+                  </div>
+
+                  <div class="form__group">
+                    <input
+                      type="email"
+                      class="form__input"
+                      placeholder="Email address"
+                      id="email"
+                      required
+                    />
+                    <label for="name" class="form__label">Email address</label>
+                  </div>
+
+                  <div class="form__group">
+                    <textarea
+                      type="text"
+                      class="form__input form__input__message"
+                      placeholder="Your Message"
+                      id="text"
+                      required
+                    ></textarea>
+                    <label for="text" class="form__label">Your Message</label>
+                  </div>
+
+                  <div class="form__group u-margin-bottom-medium">
+                    <div class="form__radio-group"></div>
+                  </div>
+                  <div class="form__group">
+                    <button class="button button--normal">SEND MESSAGE</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>
   </body>
