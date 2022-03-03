@@ -360,13 +360,23 @@
 
       <section class="action">
         <section class="section-book">
+          <div class="action--heading__main">
+            <img
+              class="action--heading__png"
+              src="src/img/getIn.png"
+              alt="welcome"
+            />
+            <h1 class="action--heading__sub">
+              <strong>TOUCH WITH US</strong>
+            </h1>
+          </div>
           <div class="row">
             <div class="book">
               <div class="book__form">
                 <form action="#" class="form">
                   <div class="u-margin-bottom-medium">
                     <h1 class="action--heading">
-                      INQUERY <strong>FORM</strong>
+                      INQUIRY <strong>FORM</strong>
                     </h1>
                   </div>
 
@@ -380,6 +390,19 @@
                     />
                     <label for="name" class="form__label">Full Name</label>
                   </div>
+                  <div class="form__group">
+                    <input
+                      type="tel"
+                      class="form__input"
+                      placeholder="Contact Number"
+                      id="phone"
+                      pattern="[0-9]{10}"
+                      required
+                    />
+                    <label for="phone" class="form__label"
+                      >Contact Number</label
+                    >
+                  </div>
 
                   <div class="form__group">
                     <input
@@ -389,7 +412,7 @@
                       id="email"
                       required
                     />
-                    <label for="name" class="form__label">Email address</label>
+                    <label for="email" class="form__label">Email address</label>
                   </div>
 
                   <div class="form__group">
@@ -402,13 +425,10 @@
                     ></textarea>
                     <label for="text" class="form__label">Your Message</label>
                   </div>
-
-                  <div class="form__group u-margin-bottom-medium">
-                    <div class="form__radio-group"></div>
-                  </div>
-                  <div class="form__group">
-                    <button class="button button--normal">SEND MESSAGE</button>
-                  </div>
+                  <button class="button button--form flex">
+                    <p>SEND MESSAGE</p>
+                    <img class="button--form__svg" src="src/svg/letter1.svg" />
+                  </button>
                 </form>
               </div>
             </div>

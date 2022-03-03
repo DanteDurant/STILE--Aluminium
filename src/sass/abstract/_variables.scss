@@ -1,5 +1,6 @@
 $color-primary: #0080ff;
 $color-primary_dark: #236097;
+$color-primary_dark-transparent--med: #236197cc;
 $color-primary_dark-transparent: #2361977e;
 
 // #0080ff
@@ -22,7 +23,8 @@ $svg-white: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg)
   brightness(110%) contrast(110%);
 
 $fw-reg: 300;
-$fw-bold: 700;
+$fw-med: 600;
+$fw-bold: 900;
 
 $fs-h1: 3rem;
 $fs-h2: 2.25rem;

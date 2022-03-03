@@ -29,6 +29,10 @@
       transition: all 100ms;
       transform: translateY(0.2rem);
     }
+
+    & p {
+      color: $color-white;
+    }
   }
 
   &--fb {
@@ -67,8 +71,8 @@
 
   &--intro {
     position: absolute;
-    font-size: 1.2rem;
-    font-weight: normal;
+    font-size: 1.5rem;
+    font-weight: $fw-med;
     left: 15%;
     padding-right: 1rem;
 
@@ -88,7 +92,7 @@
     &:active,
     &:focus {
       transition: all 100ms;
-      transform: translateX(0.3rem);
+      transform: translateX(0.6rem);
     }
   }
 
@@ -103,5 +107,30 @@
   &--svg {
     width: 5rem;
     filter: $svg-white;
+  }
+
+  // INQUIRY FORM /////////////////////////////////
+
+  &--form {
+    background-color: $color-primary_dark-transparent--med;
+    & p {
+      color: $color-white;
+    }
+
+    &:hover {
+      background-color: $color-primary_dark;
+    }
+
+    &:active,
+    &:focus {
+      transition: all 100ms;
+      transform: translateX(0.6rem);
+    }
+  }
+
+  &--form__svg {
+    width: 4rem;
+    filter: $svg-white;
+    margin-left: 1.5rem;
   }
 }

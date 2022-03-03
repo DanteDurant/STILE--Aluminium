@@ -4,20 +4,41 @@
   background-color: $color-white;
 
   &--heading {
+    &__main {
+      position: relative;
+      height: 19rem;
+      margin-left: 11rem;
+      margin-bottom: 5rem;
+    }
+
+    &__png {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 35rem;
+    }
+
+    &__sub {
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      color: $color-white;
+    }
+
     color: $color-primary_dark;
     font-size: 4.5rem;
-    font-weight: 600;
+
     & strong {
-      font-weight: 900;
+      font-weight: $fw-bold;
     }
   }
 }
 
 .section-book {
-  padding: 15rem 0;
+  padding: 8rem 0 15rem 0;
   background-image: linear-gradient(
     to right bottom,
-    $color-primary,
+    $color-primary_dark-transparent,
     $color-primary_dark
   );
 }
@@ -53,7 +74,7 @@
 // grid /////////////////////////////////////////
 
 .row {
-  max-width: 114rem;
+  max-width: 85.5%;
   margin: 0 auto;
 
   &:not(:last-child) {
