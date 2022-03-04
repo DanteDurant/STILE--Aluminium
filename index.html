@@ -359,8 +359,8 @@
       </section>
 
       <section class="action">
-        <section class="section-book">
-          <div class="action--heading__main">
+        <div class="action--heading__main">
+          <div>
             <img
               class="action--heading__png"
               src="src/img/getIn.png"
@@ -369,71 +369,75 @@
             <h1 class="action--heading__sub">
               <strong>TOUCH WITH US</strong>
             </h1>
+            <p class="action--heading__text">
+              Need help? We’re always more than happy to assist. Let us know
+              about your enquiry below and we’ll get in touch with you soonest
+              to advise.
+            </p>
           </div>
-          <div class="row">
-            <div class="book">
-              <div class="book__form">
-                <form action="#" class="form">
-                  <div class="u-margin-bottom-medium">
-                    <h1 class="action--heading">
-                      INQUIRY <strong>FORM</strong>
-                    </h1>
-                  </div>
+          <img
+            class="action--heading__image lazy-img"
+            src="src/img/telephone-lazy.jpg"
+            data-src="https://i.ibb.co/PD7FHRR/telephone.jpg"
+            alt="woman talkingon telephone"
+          />
+        </div>
 
-                  <div class="form__group">
-                    <input
-                      type="text"
-                      class="form__input"
-                      placeholder="Full Name"
-                      id="name"
-                      required
-                    />
-                    <label for="name" class="form__label">Full Name</label>
-                  </div>
-                  <div class="form__group">
-                    <input
-                      type="tel"
-                      class="form__input"
-                      placeholder="Contact Number"
-                      id="phone"
-                      pattern="[0-9]{10}"
-                      required
-                    />
-                    <label for="phone" class="form__label"
-                      >Contact Number</label
-                    >
-                  </div>
+        <div class="book">
+          <div class="book__form">
+            <form action="#" class="form">
+              <h1 class="action--heading">INQUIRY <strong>FORM</strong></h1>
 
-                  <div class="form__group">
-                    <input
-                      type="email"
-                      class="form__input"
-                      placeholder="Email address"
-                      id="email"
-                      required
-                    />
-                    <label for="email" class="form__label">Email address</label>
-                  </div>
-
-                  <div class="form__group">
-                    <textarea
-                      type="text"
-                      class="form__input form__input__message"
-                      placeholder="Your Message"
-                      id="text"
-                      required
-                    ></textarea>
-                    <label for="text" class="form__label">Your Message</label>
-                  </div>
-                  <button class="button button--form flex">
-                    <p>SEND MESSAGE</p>
-                    <img class="button--form__svg" src="src/svg/letter1.svg" />
-                  </button>
-                </form>
+              <div class="form__group">
+                <input
+                  type="text"
+                  class="form__input"
+                  placeholder="Full Name"
+                  id="name"
+                  required
+                />
+                <label for="name" class="form__label">Full Name</label>
               </div>
-            </div>
+              <div class="form__group">
+                <input
+                  type="tel"
+                  class="form__input"
+                  placeholder="Contact Number"
+                  id="phone"
+                  pattern="[0-9]{10}"
+                  required
+                />
+                <label for="phone" class="form__label">Contact Number</label>
+              </div>
+
+              <div class="form__group">
+                <input
+                  type="email"
+                  class="form__input"
+                  placeholder="Email address"
+                  id="email"
+                  required
+                />
+                <label for="email" class="form__label">Email address</label>
+              </div>
+
+              <div class="form__group">
+                <textarea
+                  type="text"
+                  class="form__input form__input__message"
+                  placeholder="Your Message"
+                  id="text"
+                  required
+                ></textarea>
+                <label for="text" class="form__label">Your Message</label>
+              </div>
+              <button class="button button--form flex">
+                <p>SEND MESSAGE</p>
+                <img class="button--form__svg" src="src/svg/letter1.svg" />
+              </button>
+            </form>
           </div>
-        </section>
+        </div>
       </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>

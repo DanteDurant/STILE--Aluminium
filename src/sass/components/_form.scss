@@ -1,4 +1,5 @@
 .form {
+  height: 72rem;
   &__group {
     &:not(:last-child) {
       margin-bottom: 2rem;
@@ -6,11 +7,12 @@
   }
   &__input {
     font-size: 2rem;
+    font-weight: $fw-med;
     font-family: inherit;
-    color: $color-white;
+    color: $color-primary_dark;
     padding: 1.5rem 2rem;
     border-radius: 2px;
-    background-color: $color-primary_dark-transparent;
+    background-color: $color-white;
     border: none;
     border-bottom: 3px solid transparent;
     width: 87.7%;
@@ -25,6 +27,7 @@
     }
     &:focus {
       outline: none;
+      color: $color-primary;
       box-shadow: 0 1rem 2rem rgba(black, 0.1);
       border-bottom: 3px solid $color-accepted;
     }
@@ -34,7 +37,7 @@
     }
 
     &::-webkit-input-placeholder {
-      color: $color-white;
+      color: $color-primary_dark;
     }
   }
 
@@ -43,6 +46,7 @@
     font-weight: 700;
     margin-left: 2rem;
     margin-top: 0.7rem;
+    color: $color-primary_dark;
     display: block;
     transition: all 0.3s;
   }

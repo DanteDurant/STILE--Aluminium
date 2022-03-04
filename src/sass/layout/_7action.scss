@@ -1,32 +1,50 @@
 .action {
-  height: 75rem;
+  height: 150rem;
   width: 100%;
-  background-color: $color-white;
+  background-color: whitesmoke;
 
   &--heading {
     &__main {
       position: relative;
-      height: 19rem;
-      margin-left: 11rem;
-      margin-bottom: 5rem;
+      height: 50rem;
+      margin: 0 0 5rem 11rem;
     }
 
     &__png {
       position: absolute;
       left: 0;
-      top: 0;
+      top: 7rem;
       width: 35rem;
     }
 
     &__sub {
       position: absolute;
-      bottom: 0;
+      top: 21.5rem;
       left: 10%;
-      color: $color-white;
+      color: $color-primary_dark;
+    }
+
+    &__text {
+      position: absolute;
+      width: 89rem;
+      font-size: 4rem;
+      top: 29rem;
+    }
+
+    &__image {
+      position: absolute;
+      width: 40rem;
+      height: 40rem;
+      top: 7.5rem;
+      right: 6rem;
+      object-fit: cover;
+      border-radius: 1rem;
+      box-shadow: $box-shadow;
     }
 
     color: $color-primary_dark;
     font-size: 4.5rem;
+    margin-bottom: 4rem;
 
     & strong {
       font-weight: $fw-bold;
@@ -34,21 +52,13 @@
   }
 }
 
-.section-book {
-  padding: 8rem 0 15rem 0;
-  background-image: linear-gradient(
-    to right bottom,
-    $color-primary_dark-transparent,
-    $color-primary_dark
-  );
-}
-
 .book {
-  // THe Solid Color-Gradient technique
+  position: relative;
+
   background-image: linear-gradient(
       90deg,
-      rgba($color-white, 0.9) 0%,
-      rgba($color-white, 0.9) 45.5%,
+      rgba($color-primary_dark-transparent--light, 1) 0%,
+      rgba($color-primary_dark-transparent--light, 1) 45.5%,
       transparent 45%
     ),
     linear-gradient(
@@ -59,39 +69,21 @@
     ),
     url('/src/img/background1.jpg');
 
-  // background-size: 100%;
-  //same thing as
   background-size: cover;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(black, 0.2);
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: $color-primary_dark-transparent--light;
+    height: 84rem;
+    bottom: 0;
+    width: 50vw;
+    left: -50vw;
+  }
 
   &__form {
     width: 50%;
-    padding: 6rem;
+    padding: 6rem 11rem 6rem 11rem;
   }
-}
-
-// grid /////////////////////////////////////////
-
-.row {
-  max-width: 85.5%;
-  margin: 0 auto;
-
-  &:not(:last-child) {
-    margin-bottom: 8rem;
-  }
-
-  // ^(starts with), *(contains), $(ends with)
-  [class^='col-'] {
-    // background-color: orangered;
-    float: left;
-
-    &:not(:last-child) {
-      margin-right: 6rem;
-    }
-  }
-}
-
-.u-margin-bottom-medium {
-  margin-bottom: 4rem !important;
 }
