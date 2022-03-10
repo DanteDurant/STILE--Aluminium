@@ -63,11 +63,11 @@
     ),
     linear-gradient(
       90deg,
-      rgba($color-primary_dark, 0.7) 100%,
-      rgba($color-primary_dark, 0.7) 54.5%,
+      rgba($color-primary_dark-transparent--light, 0.6) 100%,
+      rgba($color-primary_dark-transparent--light, 0.3) 54.5%,
       transparent 55%
     ),
-    url('/src/img/background1.jpg');
+    url('/src/img/form-bg1.jpg');
 
   background-size: cover;
   border-radius: 3px;
@@ -86,4 +86,47 @@
     width: 50%;
     padding: 6rem 11rem 6rem 11rem;
   }
+}
+
+.details {
+  @include center-vertical;
+  top: 49%;
+  right: 0;
+  color: $color-primary_dark;
+  height: 71.5rem;
+  width: 77.5rem;
+
+  &--heading {
+    font-weight: $fw-med;
+    color: inherit;
+    line-height: 5.5rem;
+    margin-bottom: 8rem;
+
+    & strong {
+      font-weight: $fw-bold;
+    }
+  }
+
+  & a {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    font-size: 3rem;
+    font-weight: $fw-med;
+    color: inherit;
+
+    &:not(:last-child) {
+      margin-bottom: 4.5rem;
+    }
+
+    img {
+      width: 6rem;
+      filter: $svg-blue_dark;
+    }
+  }
+}
+
+.fb {
+  filter: invert(28%) sepia(72%) saturate(936%) hue-rotate(176deg)
+    brightness(94%) contrast(84%) !important;
 }
