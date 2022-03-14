@@ -1,0 +1,91 @@
+.footer {
+  @include center-horizontal;
+  height: 56rem;
+  width: 100vw;
+  background-color: $color-primary_dark;
+
+  &--grid {
+    display: grid;
+    width: 152rem;
+    margin: 0 auto;
+    padding-top: 4rem;
+    grid-template-rows: 44.5rem 0.5rem 7rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--left {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    // padding-left: 2rem;
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+
+      margin: 1.4rem 0 0 7rem;
+      & a > img {
+        margin-bottom: 3rem;
+        width: 10rem;
+        filter: $svg-white;
+      }
+    }
+  }
+  &--middle {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    & h3 {
+      margin-top: 0.6rem;
+      font-size: 4rem;
+      color: white;
+      font-weight: $fw-med;
+
+      & strong {
+        font-weight: $fw-bold;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+
+      & a {
+        margin-top: 2rem;
+        color: $color-white;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &--right {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-color: $color-white;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+      & img {
+        margin-top: 2.5rem;
+        width: 35rem;
+      }
+    }
+  }
+  &--divider {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    background-color: $color-white;
+  }
+  &--bottom {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    justify-self: end;
+    align-self: center;
+
+    & p {
+      color: $color-white;
+      font-size: 2.5rem;
+    }
+  }
+}
