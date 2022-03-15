@@ -16,17 +16,38 @@
   &--left {
     grid-column: 1/2;
     grid-row: 1/2;
-    // padding-left: 2rem;
+
+    &__logo {
+      width: 25rem;
+      margin-top: 1rem;
+      filter: $svg-white;
+
+      @include svg-hover_blue;
+    }
 
     &__links {
       display: flex;
+      gap: 3rem;
       flex-direction: column;
+      margin: 4.5rem 0 0 0.5rem;
 
-      margin: 1.4rem 0 0 7rem;
-      & a > img {
-        margin-bottom: 3rem;
-        width: 10rem;
-        filter: $svg-white;
+      & a {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        & img {
+          width: 10rem;
+          filter: $svg-white;
+          border-radius: 2.5rem;
+          @include svg-hover_blue;
+        }
+
+        & p {
+          color: $color-white;
+          font-size: 3.5rem;
+          @include text-hover_blue;
+        }
       }
     }
   }
@@ -53,6 +74,7 @@
         margin-top: 2rem;
         color: $color-white;
         font-size: 3rem;
+        @include text-hover_blue;
       }
     }
   }
@@ -86,6 +108,7 @@
     & p {
       color: $color-white;
       font-size: 2.5rem;
+      padding-right: 2rem;
     }
   }
 }

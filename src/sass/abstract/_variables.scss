@@ -19,6 +19,8 @@ $color-gray_dark-3: #333;
 $color-accepted: lightgreen;
 $color-rejected: red;
 
+$svg-blue: invert(32%) sepia(40%) saturate(4926%) hue-rotate(198deg)
+  brightness(105%) contrast(103%);
 $svg-blue_dark: invert(28%) sepia(72%) saturate(936%) hue-rotate(176deg)
   brightness(94%) contrast(84%);
 $svg-white: invert(100%) sepia(91%) saturate(38%) hue-rotate(254deg)

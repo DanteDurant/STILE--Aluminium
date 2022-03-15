@@ -32,7 +32,7 @@
 
 @mixin clearfix {
   &::after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -49,7 +49,7 @@
   border-radius: 7rem;
 }
 
-// SLIDE TEXTBOX  ////////////////////////////
+// SLIDE TEXT BOX  ////////////////////////////
 
 @mixin textbox-composition($side, $percentage) {
   #{$side}: #{$percentage};
@@ -58,4 +58,20 @@
   border-radius: 2rem;
   box-shadow: 0 0 5rem 5rem $color-primary_dark-transparent;
   z-index: 9999;
+}
+
+//FOOTER LINKS ////////////////////////////
+
+@mixin svg-hover_blue {
+  &:hover {
+    transition: all 150ms;
+    filter: $svg-blue;
+  }
+}
+
+@mixin text-hover_blue {
+  &:hover {
+    transition: all 150ms;
+    color: $color-primary;
+  }
 }
